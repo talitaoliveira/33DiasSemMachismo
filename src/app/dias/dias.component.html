@@ -13,7 +13,7 @@
     <h2>DIA: {{ dia.dia }}</h2>
     <h3>{{ dia.frase }}</h3>
     <span>#33DiasSemMachismo</span>
-    <a href="#{{ dia.dia+1 }}" class="menu-item">
+    <a href="#{{(dia.dia+1 < 33) ? dia.dia+1 : 1 }}" class="menu-item">
       <i class="fa fa-arrow-circle-down setinha" aria-hidden="true" [style.color]="dia.cor"></i>
     </a>
   </div>

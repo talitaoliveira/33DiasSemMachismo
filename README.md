@@ -1,4 +1,9 @@
-# Dias33machismo
+# 33DiasSemMachismo :muscle:
+
+<p style="text-align:center">:no_good:</p>
+
+>- Página criada para fins de estudo do Framework AngularJS 2.
+>- Reúne frases da página <a href="https://www.facebook.com/33DiasSemMachismo/" target="_blank">33DiasSemMachismo</a>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 

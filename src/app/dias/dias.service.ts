@@ -16,7 +16,7 @@ export class DiasService {
 
     var dias = [
       {dia: 1,frase: "Não interrompa a fala de uma mulher, escute o que ela tem a dizer.",background: "#B43E30", cor:"#4BC2CF"},
-      {dia: 2,frase: "Se você for acusad@ de machista, não retruque, reflita.",background: "#4BC2CF", cor:"#C67758"},
+      {dia: 2,frase: "Se você for acusado(a) de machista, não retruque, reflita.",background: "#4BC2CF", cor:"#C67758"},
       {dia: 3,frase: "Ligue para uma amiga e pergunte 'você já sofreu assédio na rua?'. Escute-a com atenção.",background: "#C19F68",cor:"#AD2D1F"},
       {dia: 4,frase: "Se perceber que está julgando uma mulher pela roupa que ela usa, pergunte a si mesmo/a: 'e se fosse eu?'",background: "#C9C6AD", cor:"#3B3855"},
       {dia: 5,frase: "Compartilhe as tarefas domésticas e o cuidado dos filhos/as",background: "#395787", cor:"#CE9F81"},

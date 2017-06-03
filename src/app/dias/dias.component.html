@@ -2,7 +2,17 @@
 
 <div>
   <div class="inicio" id="inicio">
-    <h1>#33DiasSemMachismo</h1>
+    <div class="mudar-linguagem" >
+    <p>
+      <input name="linguagem" type="radio" value="PT" id="linguagem-portuges" (click)="mudaLinguagem(campoLinguagemPT.value)" #campoLinguagemPT checked="checked" />
+      <label for="linguagem-portuges" class="label-linguagem"> PT</label>
+    </p>
+    <p>
+      <input name="linguagem" type="radio" value="EN" id="linguagem-ingles" (click)="mudaLinguagem(campoLinguagemEN.value)" #campoLinguagemEN/>
+      <label for="linguagem-ingles" class="label-linguagem">EN</label>
+    </p>
+    </div>
+    <h1>{{ hashTag }}</h1>
     <a href="#1" class="menu-item">
       <i class="fa fa-arrow-circle-down setinha setinha-inicio" aria-hidden="true"></i>
     </a>
@@ -10,9 +20,9 @@
 
   <div *ngFor=" let dia of dias" class="frase-dia" id="{{ dia.dia }}" [style.background]="dia.background" [style.color]="dia.cor"
     [attr.data-hash]="dia.dia">
-    <h2>DIA: {{ dia.dia }}</h2>
+    <h2>{{ nameDay }}: {{ dia.dia }}</h2>
     <h3>{{ dia.frase }}</h3>
-    <span>#33DiasSemMachismo</span>
+    <span>{{ hashTag }}</span>
     <a href="#{{(dia.dia+1 < 33) ? dia.dia+1 : 1 }}" class="menu-item">
       <i class="fa fa-arrow-circle-down setinha" aria-hidden="true" [style.color]="dia.cor"></i>
     </a>

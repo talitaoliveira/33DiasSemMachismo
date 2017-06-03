@@ -9,12 +9,11 @@ import { DiasService } from './dias.service';
 })
 export class DiasComponent implements OnInit {
 
-  //childTitle:string = 'This text is passed to child';
-
   hashTag: string = '';
   dias;
   cores;
   cor;
+  nameDay: string = 'DIA';
 
   constructor(private diasService: DiasService) { 
 
@@ -30,6 +29,19 @@ export class DiasComponent implements OnInit {
      
      return this.cor;
 
+   }
+
+   mudaLinguagem(language) {
+     if( language == 'PT' ){
+        this.dias = this.diasService.getDias();
+        this.hashTag = '#33DiasSemMachismo';
+        this.nameDay= 'DIA';
+     }else{
+        this.dias = this.diasService.getDiasIngles();
+        this.hashTag = '#33DaysWithoutMachismo';
+        this.nameDay= 'DAY';
+     }
+     
    }
 
   ngOnInit() {

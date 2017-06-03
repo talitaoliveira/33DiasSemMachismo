@@ -68,6 +68,18 @@ animation-name: move;
   font-size: 2em;
 }
 
+.mudar-linguagem{
+  position: fixed;
+  top:0;
+  left: 0;
+  display: flex;
+  width: 120px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.label-linguagem{
+  color: #FFF !important;
+}
+
 
 @keyframes move {
   0% {

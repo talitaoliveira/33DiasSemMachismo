@@ -13,10 +13,6 @@ export class DiasService {
   }
 
   getDias() {
-    // var dias = "";
-    // var url = 'http://jc.ne10.uol.com.br/blogs/estaticos/audiencia.json';
-
-    // return this.http.get(url).map((teste => console.log(teste))
 
     var dias = [
       {dia: 1,frase: "Não interrompa a fala de uma mulher, escute o que ela tem a dizer.",background: "#B43E30", cor:"#4BC2CF"},

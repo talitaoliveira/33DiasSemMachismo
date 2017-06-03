@@ -1,0 +1,32 @@
+{
+  "name": "33DiasSemMachismo",
+  "short_name": "33DiasSemMachismo",
+  "start_url": ".",
+  "description": "A simply readable 33DiasSemMachismo.",
+  "background_color": "#9BC097",
+  "theme_color": "#FFFFFF", 
+  "display": "standalone",  
+  "orientation": "portrait" ,
+  "icons": [  
+    {  
+      "src": "33.jpg",  
+      "sizes": "192x192",  
+      "type": "image/jpg"  
+    },  
+    {  
+      "src": "33.jpg",  
+      "sizes": "256x256",  
+      "type": "image/jpg"  
+    },  
+    {  
+      "src": "33.jpg",  
+      "sizes": "384x384",  
+      "type": "image/jpg"  
+    },  
+    {  
+      "src": "33.jpg",  
+      "sizes": "512x512",  
+      "type": "image/jpg"  
+    }
+  ]
+}

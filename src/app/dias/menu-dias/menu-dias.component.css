@@ -1,0 +1,86 @@
+header {
+  position: absolute;
+  z-index: 9999;
+}
+
+.fa-bars {
+  z-index: 1;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+  color: #7B4B94;
+  animation-name: pulse;
+  animation-duration: .5s;
+  animation-iteration-count: 5;
+  animation-direction: alternate;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  color: #FFF;
+  font-size: 2em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 0;
+  visibility: hidden;
+  position: fixed;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-inicio {
+  color: #fff;
+  background-color: #888;
+  width: 80px;
+  font-weight: bolder;
+  margin-bottom: 10vh;
+}
+.item-texto{
+  padding: 5px;
+}
+
+
+ul {
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin-bottom: 20vh;
+  margin-top: 5vh;
+}
+
+li a {
+  color: #fff;
+  background-color: #888;
+  width: 50px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 2px;
+}
+
+.show {
+  visibility: visible;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.0)
+  }
+  100% {
+    transform: scale(1.1)
+  }
+}

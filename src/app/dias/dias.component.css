@@ -1,0 +1,73 @@
+.lista-dias {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0 10px;
+  height: 20vh;
+}
+
+.lista-dias>a {
+  padding: 5px;
+  color: #001 !important;
+  width: calc(100% * (1/11) - 10px - 1px);
+  background-color: #ccc;
+  margin: 5px;
+  text-align: center
+}
+
+.lista-dias>a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.inicio {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10vw;
+  font-weight: bold;
+  background-color: #9BBF96;
+}
+
+.inicio h1 {
+  font-size: 2em;
+  color: #7B4B94;
+}
+.setinha{
+  font-size: 2em;
+  color: #7B4B94;
+  animation-name: move;
+  animation-duration: .5s;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  margin-top: 20px;
+}
+
+.frase-dia {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10vw;
+  font-weight: bold;
+}
+
+.frase-dia>h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+
+/*@keyframes move {
+  0% {
+    padding-top:5px;
+  }
+  100% {
+    padding-top:0px;
+  }
+}*/

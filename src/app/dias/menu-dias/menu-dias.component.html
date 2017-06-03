@@ -1,0 +1,18 @@
+<header>
+  <span class="icon-menu" (click)="mostraDatas()">
+    <div (click)="mostraDatas()" class="teste">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+  </span>
+  <nav class="menu-list">
+    <div clas="menu-texto">
+      <a href="#inicio" class="link-inicio menu-item item-texto">Inicio</a>
+      <a href="#sobre" class="link-inicio menu-item item-texto">Sobre</a>
+    </div>
+    <ul>
+      <li *ngFor=" let dia of dias">
+        <a class="menu-item" href="#{{ dia.dia }}">{{ dia.dia }}</a>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50vh;
+}

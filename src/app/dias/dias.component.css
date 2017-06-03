@@ -39,11 +39,17 @@
 .setinha{
   font-size: 2em;
   color: #7B4B94;
-  animation-name: move;
+  margin-top: 20px;
+}
+
+.setinha-inicio{
+animation-name: move;
   animation-duration: .5s;
   animation-iteration-count:infinite;
   animation-direction: alternate;
-  margin-top: 20px;
+  position: absolute;
+  top:55vh;
+  
 }
 
 .frase-dia {
@@ -63,11 +69,11 @@
 }
 
 
-/*@keyframes move {
+@keyframes move {
   0% {
     padding-top:5px;
   }
   100% {
     padding-top:0px;
   }
-}*/
+}

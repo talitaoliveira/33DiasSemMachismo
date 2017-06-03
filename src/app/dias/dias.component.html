@@ -1,14 +1,14 @@
 <app-menu-dias [dias]='dias'></app-menu-dias>
 
-<div class="owl-carousel owl-theme">
-  <div class="inicio swiper-slide" id="inicio">
+<div>
+  <div class="inicio" id="inicio">
     <h1>#33DiasSemMachismo</h1>
     <a href="#1" class="menu-item">
       <i class="fa fa-arrow-circle-down setinha setinha-inicio" aria-hidden="true"></i>
     </a>
   </div>
 
-  <div *ngFor=" let dia of dias" class="frase-dia swiper-slide" id="{{ dia.dia }}" [style.background]="dia.background" [style.color]="dia.cor"
+  <div *ngFor=" let dia of dias" class="frase-dia" id="{{ dia.dia }}" [style.background]="dia.background" [style.color]="dia.cor"
     [attr.data-hash]="dia.dia">
     <h2>DIA: {{ dia.dia }}</h2>
     <h3>{{ dia.frase }}</h3>

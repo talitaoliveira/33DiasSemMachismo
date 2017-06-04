@@ -46,6 +46,15 @@
           scrollTop: $(this.hash).offset().top
         }, 1500);
       });
+      /* rechamando o efeito de clicar eescollar suave quando muda a linguagem */
+      $(".escolher-linguagem").click(function (event) {
+          $(".menu-item").click(function (event) {
+          event.preventDefault();
+          $('html,body').animate({
+            scrollTop: $(this.hash).offset().top
+          }, 1500);
+        });
+      });
     });
 
   </script>

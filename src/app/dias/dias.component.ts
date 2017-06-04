@@ -15,34 +15,34 @@ export class DiasComponent implements OnInit {
   cor;
   nameDay: string = 'DIA';
 
-  constructor(private diasService: DiasService) { 
+  constructor(private diasService: DiasService) {
 
     this.hashTag = '#33DiasSemMachismo';
     this.dias = this.diasService.getDias();
     this.cores = this.diasService.getCor();
 
-   }
+  }
 
-   pegaCor(){
+  pegaCor() {
 
-     this.cor = this.cores[Math.floor(Math.random() * this.cores.length)];
-     
-     return this.cor;
+    this.cor = this.cores[Math.floor(Math.random() * this.cores.length)];
+    return this.cor;
 
-   }
+  }
 
-   mudaLinguagem(language) {
-     if( language == 'PT' ){
-        this.dias = this.diasService.getDias();
-        this.hashTag = '#33DiasSemMachismo';
-        this.nameDay= 'DIA';
-     }else{
-        this.dias = this.diasService.getDiasIngles();
-        this.hashTag = '#33DaysWithoutMachismo';
-        this.nameDay= 'DAY';
-     }
-     
-   }
+  mudaLinguagem(language) {
+    if (language === 'PT') {
+      this.dias = this.diasService.getDias();
+      this.hashTag = '#33DiasSemMachismo';
+      this.nameDay = 'DIA';
+    } else {
+      this.dias = this.diasService.getDiasIngles();
+      this.hashTag = '#33DaysWithoutMachismo';
+      this.nameDay = 'DAY';
+    }
+
+    
+  }
 
   ngOnInit() {
   }

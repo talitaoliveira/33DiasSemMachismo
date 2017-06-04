@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <!--<base href="https//talitaoliveira.githubio/33DiasSemMachismo">-->
+  <!--<base href="https://talitaoliveira.github.io/33DiasSemMachismo">-->
 
   <title>#33DiasSemMachismo</title>
   <meta name="description" content="33 dias, 33 frases para você tirar o machismo da sua vida. Frases da pagina no facebook 33dias sem machismo.">
@@ -45,6 +45,15 @@
         $('html,body').animate({
           scrollTop: $(this.hash).offset().top
         }, 1500);
+      });
+      /* rechamando o efeito de clicar eescollar suave quando muda a linguagem */
+      $(".escolher-linguagem").click(function (event) {
+          $(".menu-item").click(function (event) {
+          event.preventDefault();
+          $('html,body').animate({
+            scrollTop: $(this.hash).offset().top
+          }, 1500);
+        });
       });
     });
 
@@ -96,6 +105,6 @@
 
   </script>
 
-<script type="text/javascript" src="inline.690d9ca8ee78ed27d732.bundle.js"></script><script type="text/javascript" src="polyfills.b5bd5cd617fe99a56cd8.bundle.js"></script><script type="text/javascript" src="vendor.0497baa64f148f1aa6b7.bundle.js"></script><script type="text/javascript" src="main.91c3ca11c8ee070ae5c3.bundle.js"></script></body>
+<script type="text/javascript" src="inline.b7172e1ce007599fc1c6.bundle.js"></script><script type="text/javascript" src="polyfills.b5bd5cd617fe99a56cd8.bundle.js"></script><script type="text/javascript" src="vendor.0497baa64f148f1aa6b7.bundle.js"></script><script type="text/javascript" src="main.c7b692735ac7593c59c0.bundle.js"></script></body>
 
 </html>

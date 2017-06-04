@@ -19,18 +19,11 @@ export class DiasComponent implements OnInit {
 
     this.hashTag = '#33DiasSemMachismo';
     this.dias = this.diasService.getDias();
-    this.cores = this.diasService.getCor();
-
-  }
-
-  pegaCor() {
-
-    this.cor = this.cores[Math.floor(Math.random() * this.cores.length)];
-    return this.cor;
 
   }
 
   mudaLinguagem(language) {
+
     if (language === 'PT') {
       this.dias = this.diasService.getDias();
       this.hashTag = '#33DiasSemMachismo';
@@ -41,7 +34,6 @@ export class DiasComponent implements OnInit {
       this.nameDay = 'DAY';
     }
 
-    
   }
 
   ngOnInit() {

@@ -1,7 +1,6 @@
 <app-menu-dias [dias]='dias'></app-menu-dias>
 
 <div>
-  <!--[ngStyle]="{'background-image': 'url(' + imagemBgInicio + ')'}"-->
   <div class="inicio" id="inicio" 
     [style.background-image]="'url(' + imagemBgInicio + ')'"  >
     <div class="mudar-linguagem" >
@@ -19,14 +18,33 @@
       <i class="fa fa-arrow-circle-down setinha setinha-inicio" aria-hidden="true"></i>
     </a>
   </div>
-
-  <div *ngFor=" let dia of dias" class="frase-dia" id="{{ dia.dia }}" [style.background]="dia.background" [style.color]="dia.cor"
-    [attr.data-hash]="dia.dia">
-    <h2>{{ nameDay }}: {{ dia.dia }}</h2>
-    <h3>{{ dia.frase }}</h3>
-    <span>{{ hashTag }}</span>
-    <a href="#{{(dia.dia+1 < 33) ? dia.dia+1 : 1 }}" class="menu-item">
-      <i class="fa fa-arrow-circle-down setinha" aria-hidden="true" [style.color]="dia.cor"></i>
+<!--
+[style.background]="dia.background"
+[style.color]="dia.cor"
+-->
+  <div *ngFor=" let dia of dias" class="frase-dia" id="{{ dia.dia }}"  
+    [attr.data-hash]="dia.dia"  [style.background-image]="'url(' + imagensBgFrases[0] + ')'">
+    <div class="content-day">
+       <h2>
+      <span class="str-name-day">
+        {{ nameDay }}
+      </span>
+      <span class="str-day">
+        {{ dia.dia }}
+      </span>
+      
+    </h2>
+    <h3>
+      <span class="str-phrase">
+        {{ dia.frase }}
+      </span>
+      <small>
+        {{ hashTag }}
+      </small>
+    </h3>
+    </div>
+    <a href="#{{(dia.dia+1 < 33) ? dia.dia+1 : 1 }}" class="menu-item link-setinha-phrase"> 
+      <i class="fa fa-arrow-circle-down setinha" aria-hidden="true" ></i>
     </a>
   </div>
 </div>

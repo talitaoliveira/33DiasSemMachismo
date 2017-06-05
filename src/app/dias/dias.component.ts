@@ -10,15 +10,20 @@ import { DiasService } from './dias.service';
 export class DiasComponent implements OnInit {
 
   hashTag: string = '';
+  nomeCampanha: string = '';
   dias;
   cores;
   cor;
   nameDay: string = 'DIA';
 
+  imagemBgInicio: string = '';
+
   constructor(private diasService: DiasService) {
 
     this.hashTag = '#33DiasSemMachismo';
+    this.nomeCampanha = '33DiasSemMachismo';
     this.dias = this.diasService.getDias();
+    this.imagemBgInicio = 'assets/images/bg-inicio.jpeg';
 
   }
 

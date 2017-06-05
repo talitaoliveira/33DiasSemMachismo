@@ -4,8 +4,7 @@ footer{
   align-items: center;
   justify-content: center;
   text-align: center;
-  /*background-color: #7B4B94;*/
-  background-color: #830D0D;
+  background-color: #7B4B94;
   padding-top: 20px;
   color: #EEE;
 }
@@ -19,6 +18,5 @@ a{
   width: 100%;
   margin-top: 20px;
   padding: 15px 0;
-  /*background-color: #836493;*/
-  background-color: #5C0605;
+  background-color: #836493;
 }

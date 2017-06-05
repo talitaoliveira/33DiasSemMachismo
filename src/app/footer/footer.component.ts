@@ -7,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  siteDev: string = "https://github.com/talitaoliveira";
-  siteDesign: string = "https://www.behance.net/phillipeburgos";
+  githubDev: string = "https://github.com/talitaoliveira";
   nameDev: string = "Talita Oliveira";
-  nameDesign: string = "Phillipe Burgos";
   facebookContentSource: string = "https://www.facebook.com/33DiasSemMachismo";
   nameContentSource: string = "33DiasSemMachismo";
 

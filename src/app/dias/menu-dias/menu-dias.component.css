@@ -6,11 +6,11 @@ header {
 .fa-bars {
   z-index: 1;
   position: fixed;
-  left: 20px;
+  right: 20px;
   top: 20px;
   font-size: 3rem;
   cursor: pointer;
-  color: #FFF;
+  color: #7B4B94;
   animation-name: pulse;
   animation-duration: .5s;
   animation-iteration-count: 5;

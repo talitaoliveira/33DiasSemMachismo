@@ -71,7 +71,7 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
   position: absolute;
-  top: 85vh;
+  top: 75vh;
   color: #FFF;
   font-size: 3em;
 }
@@ -114,6 +114,8 @@
   width: 60vw;
   background-color: #830D0D;
   color: #FFF;
+  text-align: right;
+  padding-right: 10px;
 }
 
 .content-day>h3 {
@@ -121,14 +123,15 @@
   flex-direction: column;
   text-align: center;
   font-size: 2em;
-  width: 90vw;
   position: relative;
+  padding: 0 10px;
 }
 
 .content-day>h3>small {
   margin-top: 20px;
   left: 40%;
   font-size: .7em;
+  text-align: center;
 }
 
 .link-setinha-phrase {
@@ -143,30 +146,32 @@
 
 .mudar-linguagem {
   position: fixed;
-  top: 0;
-  right: 10vw;
+  top: 2vh;
+  right: 0vw;
   display: flex;
   width: 120px;
+  background-color: rgba(255,255,255,0.5);
+  padding-left: 5px;
 }
 
 .label-linguagem {
-  color: #FFF !important;
+  color: #5C0605 !important;
 }
 
 [type="radio"]:not(:checked)+label:before,
 [type="radio"]:not(:checked)+label:after {
-  border: 2px solid #FFF !important;
+  border: 2px solid #5C0605 !important;
 }
 
 [type="radio"]:checked+label:after,
 [type="radio"].with-gap:checked+label:after {
-  background-color: #FFF !important;
+  background-color: #5C0605 !important;
 }
 
 [type="radio"]:checked+label:after,
 [type="radio"].with-gap:checked+label:before,
 [type="radio"].with-gap:checked+label:after {
-  border: 2px solid #FFF !important;
+  border: 2px solid #5C0605 !important;
 }
 
 
@@ -209,8 +214,6 @@
   .content-day>h2>span.str-name-day {
     max-width: 190px;
     width: 20vw;
-    text-align: right;
-    padding-right: 10px;
   }
   .content-day>h3 {
     margin-left: 40px;

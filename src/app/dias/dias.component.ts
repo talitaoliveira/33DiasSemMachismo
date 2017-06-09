@@ -13,6 +13,7 @@ export class DiasComponent implements OnInit {
   nomeCampanha: string = '';
   dias: any[];
   imagensBgFrases: string[];
+  imagensBgFrases2: string[];
   nameDay: string = '';
 
   imagemBgInicio: string = '';
@@ -29,7 +30,8 @@ export class DiasComponent implements OnInit {
 
     this.imagensBgFrases = this.diasService.getBackgrounds();
 
-    console.log(this.imagensBgFrases);
+    this.imagensBgFrases2 = this.diasService.getThirtyThreeBg(this.imagensBgFrases);
+
 
   }
 
@@ -54,3 +56,4 @@ export class DiasComponent implements OnInit {
   }
 
 }
+

@@ -14,7 +14,7 @@
       </p>
     </div>
     <h1>{{ nomeCampanha }}</h1>
-    <a href="#1" class="menu-item">
+    <a href="#1" class="menu-item" title="Seguir para o dia 1">
       <i class="fa fa-arrow-circle-down setinha setinha-inicio" aria-hidden="true"></i>
     </a>
   </div>
@@ -23,7 +23,7 @@
 [style.color]="dia.cor"
 -->
   <div *ngFor=" let dia of dias" class="frase-dia" id="{{ dia.dia }}"  
-    [attr.data-hash]="dia.dia"  [style.background-image]="'url(' + imagensBgFrases[0] + ')'">
+    [attr.data-hash]="dia.dia"  [style.background-image]="'url(' + imagensBgFrases2[ dia.dia ] + ')'">
     <div class="content-day">
        <h2>
       <span class="str-name-day">
@@ -43,7 +43,7 @@
       </small>
     </h3>
     </div>
-    <a href="#{{(dia.dia+1 < 33) ? dia.dia+1 : 1 }}" class="menu-item link-setinha-phrase"> 
+    <a href="#{{(dia.dia+1 < 33) ? dia.dia+1 : 1 }}" class="menu-item link-setinha-phrase" title="{{(dia.dia+1 < 33) ? 'Seguir para o dia '+ (dia.dia + 1) : 'Voltar para o dia ' + 1 }}"> 
       <i class="fa fa-arrow-circle-down setinha" aria-hidden="true" ></i>
     </a>
   </div>

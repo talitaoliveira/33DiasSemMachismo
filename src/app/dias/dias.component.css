@@ -112,6 +112,7 @@
   text-align: center;
   font-size: .5em;
   width: 60vw;
+  max-width: 500px;
   background-color: #830D0D;
   color: #FFF;
   text-align: right;
@@ -140,9 +141,10 @@
   align-items: flex-start;
   font-size: 2em;
 }
+
 .link-setinha-phrase>i.setinha {
-    color: #830D0D;
-  }
+  color: #830D0D;
+}
 
 .mudar-linguagem {
   position: fixed;
@@ -150,7 +152,7 @@
   right: 0vw;
   display: flex;
   width: 120px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   padding-left: 5px;
 }
 
@@ -220,12 +222,45 @@
   }
   .link-setinha-phrase>i.setinha {
     position: absolute;
-    top: 20vh;
+    top: 10vh;
   }
   .content-day>h3>small {
-  position: absolute;
-  top:80px;
-  left: 40%;
-  font-size: .7em;
+    position: absolute;
+    top: 80px;
+    left: 40%;
+    font-size: .7em;
+  }
 }
+
+@media (min-width: 568px) and (orientation: landscape) {
+  .content-day>h3 {
+    font-size: 1.5em;
+  }
+  .link-setinha-phrase {
+    top: 15vh;
+  }
+  .content-day {
+    position: relative;
+    width: 100vw;
+    color: #830D0D;
+  }
+  .content-day>h2 {
+    width: 80%;
+    background: #830D0D;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .content-day>h2>span.str-name-day {
+    height: inherit;
+    background-color: transparent;
+    width: initial;
+    vertical-align: text-bottom;
+  }
+  .content-day>h2>span.str-day {
+    color: #FFF;
+  }
+  .link-setinha-phrase>i.setinha {
+    font-size: 1.2em;
+  }
 }

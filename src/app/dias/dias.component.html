@@ -43,7 +43,7 @@
       </small>
     </h3>
     </div>
-    <a href="#{{(dia.dia+1 < 33) ? dia.dia+1 : 1 }}" class="menu-item link-setinha-phrase" title="{{(dia.dia+1 < 33) ? 'Seguir para o dia '+ (dia.dia + 1) : 'Voltar para o dia ' + 1 }}"> 
+    <a href="#{{(dia.dia+1 <= 33) ? dia.dia+1 : 1 }}" class="menu-item link-setinha-phrase" title="{{(dia.dia+1 <= 33) ? 'Seguir para o dia '+ (dia.dia + 1) : 'Voltar para o dia ' + 1 }}"> 
       <i class="fa fa-arrow-circle-down setinha" aria-hidden="true" ></i>
     </a>
   </div>

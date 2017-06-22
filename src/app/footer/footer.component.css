@@ -4,7 +4,8 @@ footer{
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #7B4B94;
+  /*background-color: #7B4B94;*/
+  background-color: #830D0D;
   padding-top: 20px;
   color: #EEE;
 }
@@ -14,9 +15,10 @@ a{
   text-decoration: underline;
 }
 
-.footer-copyright{
+.footer-end{
   width: 100%;
   margin-top: 20px;
   padding: 15px 0;
-  background-color: #836493;
+  /*background-color: #836493;*/
+  background-color: #5C0605;
 }

@@ -1,30 +1,50 @@
 <app-menu-dias [dias]='dias'></app-menu-dias>
 
 <div>
-  <div class="inicio" id="inicio">
+  <div class="inicio" id="inicio" 
+    [style.background-image]="'url(' + imagemBgInicio + ')'"  >
     <div class="mudar-linguagem" >
-    <p>
-      <input class="escolher-linguagem" name="linguagem" type="radio" value="PT" id="linguagem-portuges" (click)="mudaLinguagem(campoLinguagemPT.value)" #campoLinguagemPT checked="checked" />
-      <label for="linguagem-portuges" class="label-linguagem"> PT</label>
-    </p>
-    <p>
-      <input class="escolher-linguagem" name="linguagem" type="radio" value="EN" id="linguagem-ingles" (click)="mudaLinguagem(campoLinguagemEN.value)" #campoLinguagemEN/>
-      <label for="linguagem-ingles" class="label-linguagem">EN</label>
-    </p>
+      <p>
+        <input class="escolher-linguagem" name="linguagem" type="radio" value="PT" id="linguagem-portuges" (click)="mudaLinguagem(campoLinguagemPT.value)" #campoLinguagemPT checked="checked" />
+        <label for="linguagem-portuges" class="label-linguagem"> PT</label>
+      </p>
+      <p>
+        <input class="escolher-linguagem" name="linguagem" type="radio" value="EN" id="linguagem-ingles" (click)="mudaLinguagem(campoLinguagemEN.value)" #campoLinguagemEN/>
+        <label for="linguagem-ingles" class="label-linguagem">EN</label>
+      </p>
     </div>
-    <h1>{{ hashTag }}</h1>
-    <a href="#1" class="menu-item">
+    <h1>{{ nomeCampanha }}</h1>
+    <a href="#1" class="menu-item" title="Seguir para o dia 1">
       <i class="fa fa-arrow-circle-down setinha setinha-inicio" aria-hidden="true"></i>
     </a>
   </div>
-
-  <div *ngFor=" let dia of dias" class="frase-dia" id="{{ dia.dia }}" [style.background]="dia.background" [style.color]="dia.cor"
-    [attr.data-hash]="dia.dia">
-    <h2>{{ nameDay }}: {{ dia.dia }}</h2>
-    <h3>{{ dia.frase }}</h3>
-    <span>{{ hashTag }}</span>
-    <a href="#{{(dia.dia+1 < 33) ? dia.dia+1 : 1 }}" class="menu-item">
-      <i class="fa fa-arrow-circle-down setinha" aria-hidden="true" [style.color]="dia.cor"></i>
+<!--
+[style.background]="dia.background"
+[style.color]="dia.cor"
+-->
+  <div *ngFor=" let dia of dias" class="frase-dia" id="{{ dia.dia }}"  
+    [attr.data-hash]="dia.dia"  [style.background-image]="'url(' + imagensBgFrases2[ dia.dia ] + ')'">
+    <div class="content-day">
+       <h2>
+      <span class="str-name-day">
+        {{ nameDay }}
+      </span>
+      <span class="str-day">
+        {{ dia.dia }}
+      </span>
+      
+    </h2>
+    <h3>
+      <span class="str-phrase">
+        {{ dia.frase }}
+      </span>
+      <small>
+        {{ hashTag }}
+      </small>
+    </h3>
+    </div>
+    <a href="#{{(dia.dia+1 <= 33) ? dia.dia+1 : 1 }}" class="menu-item link-setinha-phrase" title="{{(dia.dia+1 <= 33) ? 'Seguir para o dia '+ (dia.dia + 1) : 'Voltar para o dia ' + 1 }}"> 
+      <i class="fa fa-arrow-circle-down setinha" aria-hidden="true" ></i>
     </a>
   </div>
 </div>

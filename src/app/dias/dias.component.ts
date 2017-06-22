@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+  import { Component, OnInit } from '@angular/core';
 
 import { DiasService } from './dias.service';
 
@@ -10,15 +10,28 @@ import { DiasService } from './dias.service';
 export class DiasComponent implements OnInit {
 
   hashTag: string = '';
-  dias;
-  cores;
-  cor;
-  nameDay: string = 'DIA';
+  nomeCampanha: string = '';
+  dias: any[];
+  imagensBgFrases: string[];
+  imagensBgFrases2: string[];
+  nameDay: string = '';
+
+  imagemBgInicio: string = '';
+
+  imagens33: string[];
 
   constructor(private diasService: DiasService) {
 
+    this.nameDay = 'dia';
     this.hashTag = '#33DiasSemMachismo';
+    this.nomeCampanha = '33DiasSemMachismo';
     this.dias = this.diasService.getDias();
+    this.imagemBgInicio = 'assets/images/bg-inicio.jpeg';
+
+    this.imagensBgFrases = this.diasService.getBackgrounds();
+
+    this.imagensBgFrases2 = this.diasService.getThirtyThreeBg(this.imagensBgFrases);
+
 
   }
 
@@ -27,11 +40,14 @@ export class DiasComponent implements OnInit {
     if (language === 'PT') {
       this.dias = this.diasService.getDias();
       this.hashTag = '#33DiasSemMachismo';
-      this.nameDay = 'DIA';
+      this.nomeCampanha = '33DiasSemMachismo';
+      this.nameDay = 'dia';
+
     } else {
       this.dias = this.diasService.getDiasIngles();
       this.hashTag = '#33DaysWithoutMachismo';
-      this.nameDay = 'DAY';
+      this.nomeCampanha = '33DaysWithoutMachismo';
+      this.nameDay = 'day';
     }
 
   }
@@ -40,3 +56,4 @@ export class DiasComponent implements OnInit {
   }
 
 }
+
